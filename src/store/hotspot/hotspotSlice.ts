@@ -65,8 +65,6 @@ export const fetchHotspots = createAsyncThunk<
     heliumAddress,
   })
 
-  console.log('results', results)
-
   const hotspots: (Hotspot & HotspotDetail)[] = []
   if (!results) return hotspots
 
