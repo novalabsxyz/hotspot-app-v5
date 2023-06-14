@@ -6134,10 +6134,10 @@ index 5c7df30..475cb45 100644
  
  @implementation RCTMGLSymbolLayer
 diff --git a/node_modules/@react-native-mapbox-gl/maps/javascript/utils/index.js b/node_modules/@react-native-mapbox-gl/maps/javascript/utils/index.js
-index bc3c28f..6004b91 100644
+index bc3c28f..95feb7f 100644
 --- a/node_modules/@react-native-mapbox-gl/maps/javascript/utils/index.js
 +++ b/node_modules/@react-native-mapbox-gl/maps/javascript/utils/index.js
-@@ -1,11 +1,11 @@
+@@ -1,12 +1,12 @@
  import React from 'react';
  import {
 -  ViewPropTypes,
@@ -6146,7 +6146,8 @@ index bc3c28f..6004b91 100644
    findNodeHandle,
    Platform,
  } from 'react-native';
-+import {ViewPropTypes} from 'deprecated-react-native-prop-types'
  import resolveAssetSource from 'react-native/Libraries/Image/resolveAssetSource';
++import { ViewPropTypes } from 'deprecated-react-native-prop-types';
  
  function getAndroidManagerInstance(module) {
+   const haveViewManagerConfig =
