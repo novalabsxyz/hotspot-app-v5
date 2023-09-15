@@ -4,12 +4,12 @@ PODS:
   - DoubleConversion (1.1.6)
   - EXApplication (5.1.1):
     - ExpoModulesCore
-  - EXBarCodeScanner (12.3.2):
+  - EXBarCodeScanner (12.7.0):
     - EXImageLoader
     - ExpoModulesCore
     - ZXingObjC/OneD
     - ZXingObjC/PDF417
-  - EXCamera (13.2.1):
+  - EXCamera (13.6.0):
     - ExpoModulesCore
   - EXConstants (14.2.1):
     - ExpoModulesCore
@@ -17,26 +17,26 @@ PODS:
     - ExpoModulesCore
   - EXFont (11.1.1):
     - ExpoModulesCore
-  - EXImageLoader (4.1.1):
+  - EXImageLoader (4.4.0):
     - ExpoModulesCore
     - React-Core
-  - EXLocation (15.1.1):
+  - EXLocation (15.3.0):
     - ExpoModulesCore
-  - EXPermissions (14.1.1):
+  - EXPermissions (14.4.0):
     - ExpoModulesCore
-  - Expo (48.0.19):
+  - Expo (48.0.20):
     - ExpoModulesCore
-  - ExpoHaptics (12.2.1):
+  - ExpoHaptics (12.6.0):
     - ExpoModulesCore
   - ExpoKeepAwake (12.0.1):
     - ExpoModulesCore
-  - ExpoLocalAuthentication (13.3.0):
+  - ExpoLocalAuthentication (13.6.0):
     - ExpoModulesCore
   - ExpoModulesCore (1.2.7):
     - React-Core
     - React-RCTAppDelegate
     - ReactCommon/turbomodule/core
-  - EXSecureStore (12.1.1):
+  - ExpoSecureStore (12.5.0):
     - ExpoModulesCore
   - EXSplashScreen (0.18.2):
     - ExpoModulesCore
@@ -112,7 +112,7 @@ PODS:
     - FlipperKit/FlipperKitNetworkPlugin
   - fmt (6.2.1)
   - glog (0.3.5)
-  - helium-react-native-sdk (2.1.2):
+  - helium-react-native-sdk (2.1.3):
     - React-Core
   - hermes-engine (0.71.10):
     - hermes-engine/Pre-built (= 0.71.10)
@@ -379,11 +379,11 @@ PODS:
     - React-Core
   - react-native-blur (0.8.0):
     - React
-  - react-native-config (1.5.0):
-    - react-native-config/App (= 1.5.0)
-  - react-native-config/App (1.5.0):
+  - react-native-config (1.5.1):
+    - react-native-config/App (= 1.5.1)
+  - react-native-config/App (1.5.1):
     - React-Core
-  - react-native-get-random-values (1.8.0):
+  - react-native-get-random-values (1.9.0):
     - React-Core
   - react-native-mail (6.1.1):
     - React-Core
@@ -502,11 +502,11 @@ PODS:
     - React-Core
   - RNDeviceInfo (8.7.1):
     - React-Core
-  - RNGestureHandler (2.12.0):
+  - RNGestureHandler (2.12.1):
     - React-Core
   - RNLocalize (1.4.3):
     - React-Core
-  - RNPermissions (3.8.0):
+  - RNPermissions (3.9.1):
     - React-Core
   - RNReanimated (2.14.4):
     - DoubleConversion
@@ -540,7 +540,7 @@ PODS:
     - React-RCTImage
   - RNSVG (13.4.0):
     - React-Core
-  - SocketRocket (0.6.0)
+  - SocketRocket (0.6.1)
   - Toast (4.0.0)
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
@@ -568,7 +568,7 @@ DEPENDENCIES:
   - ExpoKeepAwake (from `../node_modules/expo-keep-awake/ios`)
   - ExpoLocalAuthentication (from `../node_modules/expo-local-authentication/ios`)
   - ExpoModulesCore (from `../node_modules/expo-modules-core`)
-  - EXSecureStore (from `../node_modules/expo-secure-store/ios`)
+  - ExpoSecureStore (from `../node_modules/expo-secure-store/ios`)
   - EXSplashScreen (from `../node_modules/expo-splash-screen/ios`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native/React/FBReactNativeSpec`)
@@ -703,7 +703,7 @@ EXTERNAL SOURCES:
     :path: "../node_modules/expo-local-authentication/ios"
   ExpoModulesCore:
     :path: "../node_modules/expo-modules-core"
-  EXSecureStore:
+  ExpoSecureStore:
     :path: "../node_modules/expo-secure-store/ios"
   EXSplashScreen:
     :path: "../node_modules/expo-splash-screen/ios"
@@ -815,20 +815,20 @@ SPEC CHECKSUMS:
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   DoubleConversion: 5189b271737e1565bdce30deb4a08d647e3f5f54
   EXApplication: d8f53a7eee90a870a75656280e8d4b85726ea903
-  EXBarCodeScanner: 8e23fae8d267dbef9f04817833a494200f1fce35
-  EXCamera: a323a5942b5e7fc8349e17d728e91c18840ad561
+  EXBarCodeScanner: 296dd50f6c03928d1d71d37ea17473b304cfdb00
+  EXCamera: 2dc2bd2828bca4e283018a0b5a84aec6639ff0b4
   EXConstants: f348da07e21b23d2b085e270d7b74f282df1a7d9
   EXFileSystem: 844e86ca9b5375486ecc4ef06d3838d5597d895d
   EXFont: 6ea3800df746be7233208d80fe379b8ed74f4272
-  EXImageLoader: fd053169a8ee932dd83bf1fe5487a50c26d27c2b
-  EXLocation: 74a0ba446f54fd585ea6cfcd19a25644bf22c30d
-  EXPermissions: 2291c6736a823b4c680d5bf8e12d3c1c5d11da35
-  Expo: 8448e3a2aa1b295f029c81551e1ab6d986517fdb
-  ExpoHaptics: 5156bc5160d8e04c170dd6e645a71154951a2ad9
+  EXImageLoader: 03063370bc06ea1825713d3f55fe0455f7c88d04
+  EXLocation: c398254c61c447517af411f20868c648569a5c35
+  EXPermissions: 51c6115893689c3e9787f4819aa67ceeae601038
+  Expo: b7d2843b0a0027d0ce76121a63085764355a16ed
+  ExpoHaptics: 604aca02e942d1d43c139cae7cf397b26f85476f
   ExpoKeepAwake: 69f5f627670d62318410392d03e0b5db0f85759a
-  ExpoLocalAuthentication: 32919307c66fb3661caefa07e7811a95a7539d7b
+  ExpoLocalAuthentication: 2fed4b25cf8e54d36d5d1ebc9917e8325b3b5911
   ExpoModulesCore: 653958063a301098b541ae4dfed1ac0b98db607b
-  EXSecureStore: e8923258361cc406d0401af380f12bd05b2b720f
+  ExpoSecureStore: 5372610a4bbcf5e50fafbe6f38f8d9c22edf8253
   EXSplashScreen: 0e0a9ba0cf7553094e93213099bd7b42e6e237e9
   FBLazyVector: ddb55c55295ea51ed98aa7e2e08add2f826309d5
   FBReactNativeSpec: 90fc1a90b4b7a171e0a7c20ea426c1bf6ce4399c
@@ -843,7 +843,7 @@ SPEC CHECKSUMS:
   FlipperKit: cbdee19bdd4e7f05472a66ce290f1b729ba3cb86
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
   glog: 04b94705f318337d7ead9e6d17c019bd9b1f6b1b
-  helium-react-native-sdk: e3aabe0ed88980a4890754bf1d2e72b089b68582
+  helium-react-native-sdk: a5b54a8baa48cee7019c7dbae35cc2983f816376
   hermes-engine: d27603b55a48402501ad1928c05411dae9cd6b85
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
   Mapbox-iOS-SDK: a5915700ec84bc1a7f8b3e746d474789e35b7956
@@ -866,8 +866,8 @@ SPEC CHECKSUMS:
   React-logger: ef2269b3afa6ba868da90496c3e17a4ec4f4cee0
   react-native-ble-plx: f10240444452dfb2d2a13a0e4f58d7783e92d76e
   react-native-blur: cad4d93b364f91e7b7931b3fa935455487e5c33c
-  react-native-config: 5330c8258265c1e5fdb8c009d2cabd6badd96727
-  react-native-get-random-values: a6ea6a8a65dc93e96e24a11105b1a9c8cfe1d72a
+  react-native-config: 86038147314e2e6d10ea9972022aa171e6b1d4d8
+  react-native-get-random-values: dee677497c6a740b71e5612e8dbd83e7539ed5bb
   react-native-mail: 8fdcd3aef007c33a6877a18eb4cf7447a1d4ce4a
   react-native-mapbox-gl: 955d2c064b56ef058b9cc0fbbf6cf743b05c928e
   react-native-safe-area-context: 39c2d8be3328df5d437ac1700f4f3a4f75716acc
@@ -889,13 +889,13 @@ SPEC CHECKSUMS:
   RNCAsyncStorage: b03032fdbdb725bea0bd9e5ec5a7272865ae7398
   RNCClipboard: 41d8d918092ae8e676f18adada19104fa3e68495
   RNDeviceInfo: aad3c663b25752a52bf8fce93f2354001dd185aa
-  RNGestureHandler: dec4645026e7401a0899f2846d864403478ff6a5
+  RNGestureHandler: c0d04458598fcb26052494ae23dda8f8f5162b13
   RNLocalize: 7c7aeda16c01db7a0918981c14875c0a53be9b79
-  RNPermissions: 3bad5f7035a7b72bc529441a820474bd0b42bc5f
+  RNPermissions: 179b62e036a6e188671fb2b8a81288abf65c2b8c
   RNReanimated: cc5e3aa479cb9170bcccf8204291a6950a3be128
   RNScreens: 218801c16a2782546d30bd2026bb625c0302d70f
   RNSVG: 07dbd870b0dcdecc99b3a202fa37c8ca163caec2
-  SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
+  SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   Yoga: e7ea9e590e27460d28911403b894722354d73479
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
@@ -903,4 +903,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: ad6c12aa99d7f1ecf06a750f63bd2572c68854f6
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.12.1
