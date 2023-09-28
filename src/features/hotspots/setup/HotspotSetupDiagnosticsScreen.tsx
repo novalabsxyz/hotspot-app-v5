@@ -68,6 +68,7 @@ const HotspotSetupDiagnosticsScreen = () => {
       const result = await getDiagnosticInfo()
       return result
     } catch (e) {
+      // eslint-disable-next-line no-console
       console.error(e)
       setDiagnosticsError(String(e))
     }

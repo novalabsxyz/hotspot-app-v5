@@ -75,6 +75,7 @@ const HotspotSetupConfirmLocationScreen = () => {
         lat,
         lng,
       }
+
       if (params.addGatewayTxn) {
         setIsFree(true)
       } else {
@@ -83,27 +84,48 @@ const HotspotSetupConfirmLocationScreen = () => {
           type: networkTypes[0],
         })
         const hotspotExists = !!hotspotDetails
-        if (hotspotExists) {
+
+        const hasIOT = networkTypes.includes('IOT')
+
+        if (hotspotExists && hasIOT) {
+          // We only need to set location, gain, elevation for IOT hotspots.
+          // For MOBILE CBRS hotspots, these aren't used.
+          // We don't set it to avoid the location assertion fee.
           const onboardingRecord = await getOnboardingRecord(
             params.hotspotAddress,
           )
           const assert = await getAssertData({
-            ...locationParams,
             gateway: params.hotspotAddress,
             owner: userAddress,
             onboardingRecord,
-            hotspotTypes: networkTypes,
+            networkDetails: [
+              {
+                hotspotType: 'IOT',
+                lat: locationParams.lat,
+                lng: locationParams.lng,
+                elevation: locationParams.elevation,
+                decimalGain: locationParams.decimalGain,
+              },
+            ],
           })
 
           setAssertData(assert)
           setSolanaTransactions(assert.solanaTransactions)
           setIsFree(assert.isFree)
-        } else {
+        } else if (!hotspotExists) {
           // Edge case - hotspot hasn't been onboarded yet
           const onboard = await getOnboardTransactions({
             hotspotAddress: params.hotspotAddress,
-            hotspotTypes: networkTypes,
-            ...locationParams,
+            networkDetails: networkTypes.map((hotspotType) => ({
+              hotspotType,
+              // We only need to set location for IOT hotspots.
+              // For MOBILE CBRS hotspots, location isn't used.
+              // We don't set it to avoid the location assertion fee.
+              lat: hotspotType === 'IOT' ? locationParams.lat : undefined,
+              lng: hotspotType === 'IOT' ? locationParams.lng : undefined,
+              elevation: locationParams.elevation,
+              decimalGain: locationParams.decimalGain,
+            })),
           })
           setSolanaTransactions(onboard.solanaTransactions)
           setIsFree(true)

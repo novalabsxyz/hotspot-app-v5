@@ -195,7 +195,7 @@ const HotspotTxnsProgressScreen = () => {
           message: `create hotspot ${hotspotAddress}\ntxn - \n${params.addGatewayTxn}`,
         })
 
-        const txIds = await createHotspot(params.addGatewayTxn)
+        const txIds = await createHotspot(addGatewayTxn)
         if (!txIds?.length) {
           handleLog({
             message: 'create hotspot failed to create transactions',
@@ -266,14 +266,22 @@ const HotspotTxnsProgressScreen = () => {
       }
 
       handleLog({ message: 'Getting onboard transactions' })
+
       try {
-        const { solanaTransactions } = await getOnboardTransactions({
-          hotspotAddress,
-          hotspotTypes: networkTypes,
-          lat: last(params.coords),
-          lng: first(params.coords),
+        const networkDetails = networkTypes.map((hotspotType) => ({
+          hotspotType,
+          // We only need to set location for IOT hotspots.
+          // For MOBILE CBRS hotspots, location isn't used.
+          // We don't set it to avoid the location assertion fee.
+          lat: hotspotType === 'IOT' ? last(params.coords) : undefined,
+          lng: hotspotType === 'IOT' ? first(params.coords) : undefined,
           elevation: params.elevation,
           decimalGain: params.gain,
+        }))
+
+        const { solanaTransactions } = await getOnboardTransactions({
+          hotspotAddress,
+          networkDetails,
         })
 
         handleTxns({
