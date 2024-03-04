@@ -8,8 +8,6 @@ export default ({
   eth,
   wifi,
   fw,
-  connected,
-  dialable,
   ip,
   disk,
   gateway,
@@ -22,8 +20,6 @@ export default ({
   eth: string
   wifi: string
   fw: string
-  connected: string
-  dialable: string
   ip: string
   disk: string
   gateway: string
@@ -45,8 +41,6 @@ export default ({
     `Hotspot: ${kebabCase(animalHash(gateway))}`,
     `Hotspot Maker: ${hotspotMaker}`,
     `Address: ${gateway}`,
-    `Connected to Blockchain: ${connected}`,
-    `Dialable: ${dialable}`,
     `Firmware: ${fw}`,
     `App Version: ${appVersion}`,
     `Wi-Fi MAC: ${wifi}`,

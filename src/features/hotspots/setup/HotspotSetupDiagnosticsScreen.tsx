@@ -121,8 +121,6 @@ const HotspotSetupDiagnosticsScreen = () => {
       eth: diagnostics?.eth ? formatMac(diagnostics.eth) : '',
       wifi: diagnostics?.wifi ? formatMac(diagnostics.wifi) : '',
       fw: firmware?.deviceFirmwareVersion || '',
-      connected: diagnostics?.connected || '',
-      dialable: diagnostics?.dialable || '',
       ip: capitalize(diagnostics?.ip || ''),
       disk: diagnostics?.disk || '',
       gateway: address || '',
