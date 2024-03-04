@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react'
-import { ScrollView } from 'react-native'
+import { Alert, ScrollView } from 'react-native'
 import { RouteProp, useNavigation, useRoute } from '@react-navigation/native'
 import { useTranslation } from 'react-i18next'
 import { useHotspotBle, useOnboarding } from '@helium/react-native-sdk'
@@ -108,6 +108,15 @@ const HotspotSetupDiagnosticsScreen = () => {
   const handleSendReport = useCallback(() => {
     const supportEmail = getMakerSupportEmail(onboardingRecord?.maker?.id)
     const descriptionInfo = t('hotspot_settings.diagnostics.desc_info')
+
+    if (!supportEmail) {
+      const maker = onboardingRecord?.maker?.name || 'your Hotspot manufacturer'
+      Alert.alert(
+        `Contact ${maker}`,
+        `Please contact ${maker} directly for support and use their app going forward.`,
+      )
+      return
+    }
     const report = {
       eth: diagnostics?.eth ? formatMac(diagnostics.eth) : '',
       wifi: diagnostics?.wifi ? formatMac(diagnostics.wifi) : '',

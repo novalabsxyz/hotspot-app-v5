@@ -11,7 +11,7 @@ const Helium = {
       internal: [
         {
           title: 'Diagnostic',
-          body: '<b>Diagnostic support allows Helium to identify issues with your Hotspot in a secure way.</b>\n\nHelium will never have access to private keys and will only ever be able to access your Hotspot and not any other devices on your Network.\n\nIf you would like to opt-out of diagnostic support please email <b>support@helium.com</b> from the email used to purchase the Hotspot.',
+          body: '<b>Diagnostic support allows Helium to identify issues with your Hotspot in a secure way.</b>\n\nHelium will never have access to private keys and will only ever be able to access your Hotspot and not any other devices on your Network.\n\nIf you would like to opt-out of diagnostic support please email <b>hardware@hellohelium.com</b> from the email used to purchase the Hotspot.',
           button: 'Next',
         },
         {
@@ -31,7 +31,7 @@ const Helium = {
       internal: [
         {
           title: '診断',
-          body: '<b>診断サポートにより、HeliumはHotspotの問題を安全な方法で特定できます。</b>\n\nHeliumが秘密キーにアクセスすることはありません。お使いのHotspotにのみアクセスし、ネットワーク上の他のデバイスにはアクセスしません。\n\n診断サポートをオプトアウトする場合は、Hotspotの購入時に使用したメールアドレスを使用して、<b>support@helium.com</b>までメールでご連絡ください。',
+          body: '<b>診断サポートにより、HeliumはHotspotの問題を安全な方法で特定できます。</b>\n\nHeliumが秘密キーにアクセスすることはありません。お使いのHotspotにのみアクセスし、ネットワーク上の他のデバイスにはアクセスしません。\n\n診断サポートをオプトアウトする場合は、Hotspotの購入時に使用したメールアドレスを使用して、<b>hardware@hellohelium.com</b>までメールでご連絡ください。',
           button: '電源が入っています',
         },
         {
@@ -51,7 +51,7 @@ const Helium = {
       internal: [
         {
           title: '진단 도구',
-          body: '<b>Helium은 진단 지원을 통해 안전한 방법으로 Hotspot에서 발생하는 문제를 식별할 수 있습니다.</b>\n\nHelium은 개인 키에 대한 액세스 권한이 없으며 네트워크 내의 다른 기기를 제외하고 Hotspot에만 액세스할 수 있습니다.\n\n진단 지원을 선택 취소하려면 Hotspot을 구매할 때 사용한 이메일을 통해 <b>support@helium.com</b>으로 이메일을 보내주시기 바랍니다.',
+          body: '<b>Helium은 진단 지원을 통해 안전한 방법으로 Hotspot에서 발생하는 문제를 식별할 수 있습니다.</b>\n\nHelium은 개인 키에 대한 액세스 권한이 없으며 네트워크 내의 다른 기기를 제외하고 Hotspot에만 액세스할 수 있습니다.\n\n진단 지원을 선택 취소하려면 Hotspot을 구매할 때 사용한 이메일을 통해 <b>hardware@hellohelium.com</b>으로 이메일을 보내주시기 바랍니다.',
           button: '전원을 켰습니다',
         },
         {
@@ -71,7 +71,7 @@ const Helium = {
       internal: [
         {
           title: '诊断',
-          body: '<b>Hotspot 诊断支持帮助 Helium 安全确认您的 Hotspot 问题。</b>\n\nHelium 绝不会访问私人密钥，且仅可访问您的 Hotspot，无法访问您网络中的任何其他设备。\n\n若选择退出诊断支持，请使用购买 Hotspot 时提供的电子邮箱发送请求至 <b>support@helium.com</b>。',
+          body: '<b>Hotspot 诊断支持帮助 Helium 安全确认您的 Hotspot 问题。</b>\n\nHelium 绝不会访问私人密钥，且仅可访问您的 Hotspot，无法访问您网络中的任何其他设备。\n\n若选择退出诊断支持，请使用购买 Hotspot 时提供的电子邮箱发送请求至 <b>hardware@hellohelium.com</b>。',
           button: '我已开机',
         },
         {

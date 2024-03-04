@@ -292,7 +292,7 @@ export default {
       support_answer:
         'Helium Network를 통해 데이터를 전송하려면 Data Credit이 필요합니다.',
       error:
-        'Hotspot 추가를 진행할 수 없습니다. Helium에서 Hotspot을 구매한 경우, support@helium.com에 문의하고 mac 주소({{mac}})를 포함해 주시기 바랍니다.',
+        'Hotspot 추가를 진행할 수 없습니다. Helium에서 Hotspot을 구매한 경우, hardware@hellohelium.com에 문의하고 mac 주소({{mac}})를 포함해 주시기 바랍니다.',
       back: 'Hotspot 페어링으로 돌아가기',
       wait_error_title: '다시 시도해 주세요',
       wait_error_body:
@@ -355,7 +355,7 @@ export default {
     error: {
       alertTitle: '서버가 응답할 수 없음',
       alertMessage:
-        '서버 요청 시간이 초과되어 지금은 Hotspot을 추가할 수 없습니다.\n\nsupport@helium.com에 문의하고 MAC 주소(%{mac})를 적어주시기 바랍니다.',
+        '서버 요청 시간이 초과되어 지금은 Hotspot을 추가할 수 없습니다.\n\nhardware@hellohelium.com에 문의하고 MAC 주소(%{mac})를 적어주시기 바랍니다.',
     },
     skip_location: {
       title: 'Hotspot 추가',

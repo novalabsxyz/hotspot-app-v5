@@ -297,7 +297,7 @@ export default {
       support_answer:
         'Helium Network経由でデータを送信するには、Data Creditsが必要です。',
       error:
-        'Hotspotの追加を続行できません。HeliumからHotspotを購入した場合は、support@helium.comに連絡し、MACアドレス{{mac}}をお伝えください',
+        'Hotspotの追加を続行できません。HeliumからHotspotを購入した場合は、hardware@hellohelium.comに連絡し、MACアドレス{{mac}}をお伝えください',
       back: 'Hotspotのペアリングに戻る',
       wait_error_title: 'もう一度実行してください',
       wait_error_body:
@@ -362,7 +362,7 @@ export default {
     error: {
       alertTitle: 'サーバーが応答できません',
       alertMessage:
-        'サーバーへのリクエストがタイムアウトしたため、現在Hotspotを追加できません。\n\nsupport@helium.comに連絡し、MACアドレス%{mac}を伝えてください。',
+        'サーバーへのリクエストがタイムアウトしたため、現在Hotspotを追加できません。\n\nhardware@hellohelium.comに連絡し、MACアドレス%{mac}を伝えてください。',
     },
     skip_location: {
       title: 'Hotspotを追加',
