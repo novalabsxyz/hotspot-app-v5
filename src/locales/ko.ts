@@ -967,4 +967,9 @@ export default {
       desc: '1과 15 사이에서 소수점 한 자리까지의 값입니다. Hotspot 또는 안테나 제조업체에서 제공합니다.',
     },
   },
+  support_alert: {
+    maker: '핫스팟 제조업체',
+    title: '연락하다 {{maker}}',
+    body: '연락주세요 {{maker}} 직접 지원을 받고 앞으로 앱을 사용하세요.',
+  },
 }

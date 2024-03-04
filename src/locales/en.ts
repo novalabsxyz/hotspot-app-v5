@@ -569,4 +569,9 @@ export default {
     },
     copiedToClipboard: 'Copied {{address}} to clipboard',
   },
+  support_alert: {
+    maker: 'your Hotspot manufacturer',
+    title: 'Contact {{maker}}',
+    body: 'Please contact {{maker}} directly for support and use their app going forward.',
+  },
 }

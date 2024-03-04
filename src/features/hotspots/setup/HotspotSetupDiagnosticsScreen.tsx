@@ -110,10 +110,10 @@ const HotspotSetupDiagnosticsScreen = () => {
     const descriptionInfo = t('hotspot_settings.diagnostics.desc_info')
 
     if (!supportEmail) {
-      const maker = onboardingRecord?.maker?.name || 'your Hotspot manufacturer'
+      const maker = onboardingRecord?.maker?.name || t('support_alert.maker')
       Alert.alert(
-        `Contact ${maker}`,
-        `Please contact ${maker} directly for support and use their app going forward.`,
+        t('support_alert.title', { maker }),
+        t('support_alert.body', { maker }),
       )
       return
     }

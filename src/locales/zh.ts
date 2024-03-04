@@ -925,4 +925,9 @@ export default {
       desc: '此值介于 1 - 15 之间，精确到小数点后一位。由 Hotspot 或天线制造商提供。',
     },
   },
+  support_alert: {
+    maker: '您的热点制造商',
+    title: '接触 {{maker}}',
+    body: '请联系 {{maker}} 直接寻求支持并继续使用他们的应用程序。',
+  },
 }
