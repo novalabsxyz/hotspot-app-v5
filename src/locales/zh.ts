@@ -280,7 +280,7 @@ export default {
       support_title: '什么是 Data Credits?',
       support_answer: '通过 Helium 网络发送数据时需要支付 Data Credits。',
       error:
-        '无法继续添加 Hotspot。如果您是从 Helium 购买的 Hotspot，请联系 support@helium.com 并附上 mac 地址 {{mac}}',
+        '无法继续添加 Hotspot。如果您是从 Helium 购买的 Hotspot，请联系 hardware@hellohelium.com 并附上 mac 地址 {{mac}}',
       back: '返回 Hotspot 配对',
       wait_error_title: '请重试',
       wait_error_body: 'Hotspot Miner 即将启动。请稍后重试。',
@@ -334,7 +334,7 @@ export default {
     error: {
       alertTitle: '服务器无法响应',
       alertMessage:
-        '服务器请求已超时，我们目前无法添加您的 Hotspot。\n\n请联系 support@helium.com 并记下 MAC 地址 %{mac}。',
+        '服务器请求已超时，我们目前无法添加您的 Hotspot。\n\n请联系 hardware@hellohelium.com 并记下 MAC 地址 %{mac}。',
     },
     skip_location: {
       title: '添加 Hotspot',
@@ -924,5 +924,10 @@ export default {
       title: '天线 TX/RX 增益',
       desc: '此值介于 1 - 15 之间，精确到小数点后一位。由 Hotspot 或天线制造商提供。',
     },
+  },
+  support_alert: {
+    maker: '您的热点制造商',
+    title: '接触 {{maker}}',
+    body: '请联系 {{maker}} 直接寻求支持并继续使用他们的应用程序。',
   },
 }

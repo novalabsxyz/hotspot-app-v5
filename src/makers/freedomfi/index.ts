@@ -5,7 +5,7 @@ export default {
   antennas,
   hotspots,
   id: 19,
-  supportEmail: 'support@freedomfi.com',
+  supportEmail: 'hardware@hellohelium.com',
   makerApp: {
     makerAppName: 'FreedomFi App',
     ios: 'https://apps.apple.com/app/freedomfi/id1608377889',
