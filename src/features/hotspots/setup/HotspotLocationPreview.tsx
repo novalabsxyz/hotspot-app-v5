@@ -6,7 +6,7 @@ import React, {
   useRef,
   useState,
 } from 'react'
-import MapboxGL from '@react-native-mapbox-gl/maps'
+import MapboxGL from '@rnmapbox/maps'
 import Config from 'react-native-config'
 import LocationIcon from '@assets/images/location-icon.svg'
 import { StyleSheet } from 'react-native'
