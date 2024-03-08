@@ -10,9 +10,11 @@ import android.view.WindowManager;
 import expo.modules.ReactActivityDelegateWrapper;
 
 public class MainActivity extends ReactActivity {
-    @Override
+  @Override
   protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
+    // must return null for react-navigation
+    // https://github.com/software-mansion/react-native-screens#android
+    super.onCreate(null);
   }
 
   /**
