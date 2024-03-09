@@ -9,9 +9,8 @@ import React, {
 import MapboxGL, {
   FillLayerStyle,
   LineLayerStyle,
-  RegionPayload,
   SymbolLayerStyle,
-} from '@react-native-mapbox-gl/maps'
+} from '@rnmapbox/maps'
 import { Feature, Point, Position } from 'geojson'
 import { Hotspot, Witness } from '@helium/http'
 import { BoxProps } from '@shopify/restyle'
@@ -21,6 +20,7 @@ import { cellToLatLng } from 'h3-js'
 import Config from 'react-native-config'
 import { isFinite } from 'lodash'
 import LocationIcon from '@assets/images/location-icon.svg'
+import { RegionPayload } from '@rnmapbox/maps/lib/typescript/src/components/MapView'
 import Box from './Box'
 import Text from './Text'
 import NoLocation from '../assets/images/no-location.svg'
