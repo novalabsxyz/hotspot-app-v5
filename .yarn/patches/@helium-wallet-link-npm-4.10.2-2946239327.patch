@@ -1,7 +1,7 @@
-diff --git a/node_modules/@helium/wallet-link/build/walletLink.js b/node_modules/@helium/wallet-link/build/walletLink.js
-index 5378554..de9d701 100644
---- a/node_modules/@helium/wallet-link/build/walletLink.js
-+++ b/node_modules/@helium/wallet-link/build/walletLink.js
+diff --git a/build/walletLink.js b/build/walletLink.js
+index 6cdd44e38a9be056c16b7c2fa11f89853bff0bcc..2f18781bf97c7a88d7b55bdb7379509f084e67fe 100644
+--- a/build/walletLink.js
++++ b/build/walletLink.js
 @@ -17,7 +17,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  exports.createUpdateHotspotUrl = exports.createSignHotspotCallbackUrl = exports.createLinkWalletCallbackUrl = exports.createWalletLinkUrl = exports.parseWalletLinkToken = exports.verifyWalletLinkToken = exports.makeAppLinkAuthToken = void 0;
  /* eslint-disable object-curly-newline */

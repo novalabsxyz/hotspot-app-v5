@@ -15,7 +15,7 @@ import {
   BottomSheetModal,
 } from '@gorhom/bottom-sheet'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
-import Clipboard from '@react-native-community/clipboard'
+import Clipboard from '@react-native-clipboard/clipboard'
 import Toast from 'react-native-simple-toast'
 import { useSelector } from 'react-redux'
 import { FadeIn } from 'react-native-reanimated'

@@ -2,6 +2,9 @@
   "name": "Helium",
   "displayName": "Helium",
   "expo": {
-    "scheme": "helium"
+    "scheme": "helium",
+    "plugins": [
+      "expo-secure-store"
+    ]
   }
 }
