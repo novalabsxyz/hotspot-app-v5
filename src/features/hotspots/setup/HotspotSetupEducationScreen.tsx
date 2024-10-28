@@ -1,7 +1,8 @@
-import React, { useState, useRef, useCallback } from 'react'
+import React, { useState, useRef, useCallback, useMemo } from 'react'
 import { RouteProp, useNavigation, useRoute } from '@react-navigation/native'
 import { useTranslation } from 'react-i18next'
 import Carousel, { Pagination } from 'react-native-snap-carousel'
+import { StyleProp, ViewStyle } from 'react-native'
 import BackScreen from '../../../components/BackScreen'
 import Box from '../../../components/Box'
 import Text from '../../../components/Text'
@@ -73,6 +74,17 @@ const HotspotSetupEducationScreen = () => {
     <CarouselItem item={item} />
   )
 
+  const dotStyles: StyleProp<ViewStyle> = useMemo(
+    () => ({
+      width: 6,
+      height: 6,
+      borderRadius: 3,
+      marginHorizontal: spacing.s,
+      backgroundColor: colors.secondaryText,
+    }),
+    [colors.secondaryText, spacing.s],
+  )
+
   return (
     <BackScreen
       hideBack
@@ -107,13 +119,7 @@ const HotspotSetupEducationScreen = () => {
         <Pagination
           dotsLength={slides.length}
           activeDotIndex={slideIndex}
-          dotStyle={{
-            width: 6,
-            height: 6,
-            borderRadius: 3,
-            marginHorizontal: spacing.s,
-            backgroundColor: colors.secondaryText,
-          }}
+          dotStyle={dotStyles}
           inactiveDotOpacity={0.4}
           inactiveDotScale={1}
         />
