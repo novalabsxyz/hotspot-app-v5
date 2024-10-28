@@ -1749,13 +1749,13 @@ PODS:
     - Yoga
   - RNLocalize (1.4.3):
     - React-Core
-  - rnmapbox-maps (10.1.32):
+  - rnmapbox-maps (10.1.33-rc.1):
     - MapboxMaps (~> 10.19.0)
     - React
     - React-Core
-    - rnmapbox-maps/DynamicLibrary (= 10.1.32)
+    - rnmapbox-maps/DynamicLibrary (= 10.1.33-rc.1)
     - Turf
-  - rnmapbox-maps/DynamicLibrary (10.1.32):
+  - rnmapbox-maps/DynamicLibrary (10.1.33-rc.1):
     - DoubleConversion
     - hermes-engine
     - MapboxMaps (~> 10.19.0)
@@ -2309,16 +2309,16 @@ SPEC CHECKSUMS:
   ExpoSecureStore: 06c3192d58ed167f619af3d53797c055f5ada785
   EXSplashScreen: 461da413241fdf16b41576f45ef34bb9ca208702
   FBLazyVector: aa59bef5c46e93168bffcf3dc37ee1e176de799a
-  fmt: 10c6e61f4be25dc963c36bd73fc7b1705fe975be
-  glog: 08b301085f15bcbb6ff8632a8ebaf239aae04e6a
+  fmt: fad7775865bb4340e98e10997c965fd61b3c749e
+  glog: 94308668c25e8ccac76f853cda1931c7aa3f5fae
   helium-react-native-sdk: 17b612b2dacebc8f10c18ba5611f200a81c940f9
-  hermes-engine: 9de51d2f67336348a6cd5b686330e436d1dbd522
+  hermes-engine: 72bac9aa09851702d317b774a426375297ca5a69
   MapboxCommon: 119f3759f7dc9457f0695848108ab323eb643cb4
   MapboxCoreMaps: ca17f67baced23f8c952166ac6314c35bad3f66c
   MapboxMaps: b7f29ec7c33f7dc6d2947c1148edce6db81db9a7
   MapboxMobileEvents: d044b9edbe0ec7df60f6c2c9634fe9a7f449266b
   MultiplatformBleAdapter: 5a6a897b006764392f9cef785e4360f54fb9477d
-  RCT-Folly: bf5c0376ffe4dd2cf438dcf86db385df9fdce648
+  RCT-Folly: aac5a2e8a7b6b8108945e58a66d08f78b800a1ea
   RCTDeprecation: 4c2c4a088b6f0ccfcbd53c9d5614b0238ad57909
   RCTRequired: 2d8a683a7848bc0baf5883f0792c1ac43f6267b5
   RCTTypeSafety: 23df4344c69c602e1c5a8053a93c633af1bee825
@@ -2387,7 +2387,7 @@ SPEC CHECKSUMS:
   RNDeviceInfo: aad3c663b25752a52bf8fce93f2354001dd185aa
   RNGestureHandler: fc5ce5bf284640d3af6431c3a5c3bc121e98d045
   RNLocalize: 7c7aeda16c01db7a0918981c14875c0a53be9b79
-  rnmapbox-maps: 428a6a3c115ed1c5ff887bdbe240536c4b338b55
+  rnmapbox-maps: d4cf48e46387fe1f5116184fe0978cf0ec0a03e9
   RNPermissions: f84a352792c6d017dac6bb96ee190f0c21d7e002
   RNReanimated: 77242c6d67416988a2fd9f5cf574bb3e60016362
   RNScreens: c1e151cab51643c0cf42b88d275592a4aee220f1

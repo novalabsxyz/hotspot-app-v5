@@ -4654,9 +4654,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rnmapbox/maps@npm:^10.1.32":
-  version: 10.1.32
-  resolution: "@rnmapbox/maps@npm:10.1.32"
+"@rnmapbox/maps@npm:10.1.33-rc.1":
+  version: 10.1.33-rc.1
+  resolution: "@rnmapbox/maps@npm:10.1.33-rc.1"
   dependencies:
     "@turf/along": "npm:6.5.0"
     "@turf/distance": "npm:6.5.0"
@@ -4678,7 +4678,7 @@ __metadata:
       optional: true
     react-dom:
       optional: true
-  checksum: 10c0/ca8222ae031c656edcda36f32295b4b132bcc40c9625f863b1fef3a27ac6510ae5de9cb7133156f48505a19b3200cac5763b0e90acaea1ac116cf71b0ba83899
+  checksum: 10c0/6d44c30f0d51ea1c5998fea2e1e58b6965b1c446be12f0a9dc79b111a1e26b80a74a0958b16c682176e6d357092a211380ec6d0694d9bdef3bb1cd25b14b436a
   languageName: node
   linkType: hard
 
@@ -11303,7 +11303,7 @@ __metadata:
     "@react-navigation/native": "npm:^5.8.4"
     "@react-navigation/stack": "npm:^5.12.1"
     "@reduxjs/toolkit": "npm:^1.4.0"
-    "@rnmapbox/maps": "npm:^10.1.32"
+    "@rnmapbox/maps": "npm:10.1.33-rc.1"
     "@shopify/restyle": "npm:^1.3.1"
     "@solana/web3.js": "npm:^1.73.0"
     "@testing-library/jest-native": "npm:^3.4.3"
