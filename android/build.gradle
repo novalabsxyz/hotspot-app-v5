@@ -12,7 +12,6 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-        jcenter()
     }
     dependencies {
         classpath("com.android.tools.build:gradle")
@@ -28,7 +27,6 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        jcenter()
         maven { url 'https://www.jitpack.io' }
         maven {
             // expo-camera bundles a custom com.google.android:cameraview

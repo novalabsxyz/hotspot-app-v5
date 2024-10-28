@@ -121,11 +121,6 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-
     namespace "com.helium.wallet"
     defaultConfig {
         applicationId "com.helium.wallet"
@@ -189,9 +184,5 @@ dependencies {
         implementation("com.facebook.react:hermes-android")
     } else {
         implementation jscFlavor
-    }
-
-    configurations.all {
-        resolutionStrategy { force 'androidx.work:work-runtime:2.6.0' }
     }
 }

@@ -88,15 +88,15 @@ PODS:
   - hermes-engine (0.76.0):
     - hermes-engine/Pre-built (= 0.76.0)
   - hermes-engine/Pre-built (0.76.0)
-  - MapboxCommon (23.9.1)
-  - MapboxCoreMaps (10.16.6):
-    - MapboxCommon (~> 23.9)
-  - MapboxMaps (10.16.6):
-    - MapboxCommon (= 23.9.1)
-    - MapboxCoreMaps (= 10.16.6)
-    - MapboxMobileEvents (= 1.0.10)
-    - Turf (= 2.7.0)
-  - MapboxMobileEvents (1.0.10)
+  - MapboxCommon (23.11.0)
+  - MapboxCoreMaps (10.19.1):
+    - MapboxCommon (~> 23.11)
+  - MapboxMaps (10.19.0):
+    - MapboxCommon (= 23.11.0)
+    - MapboxCoreMaps (= 10.19.1)
+    - MapboxMobileEvents (= 2.0.0)
+    - Turf (= 2.8.0)
+  - MapboxMobileEvents (2.0.0)
   - MultiplatformBleAdapter (0.1.9)
   - RCT-Folly (2024.01.01.00):
     - boost
@@ -1705,8 +1705,27 @@ PODS:
     - React-utils (= 0.76.0)
   - RNCAsyncStorage (1.12.1):
     - React-Core
-  - RNCClipboard (1.5.1):
+  - RNCClipboard (1.14.2):
+    - DoubleConversion
+    - glog
+    - hermes-engine
+    - RCT-Folly (= 2024.01.01.00)
+    - RCTRequired
+    - RCTTypeSafety
     - React-Core
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-ImageManager
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-rendererdebug
+    - React-utils
+    - ReactCodegen
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - Yoga
   - RNDeviceInfo (8.7.1):
     - React-Core
   - RNGestureHandler (2.20.2):
@@ -1732,16 +1751,16 @@ PODS:
     - Yoga
   - RNLocalize (1.4.3):
     - React-Core
-  - rnmapbox-maps (10.1.18):
-    - MapboxMaps (~> 10.16.4)
+  - rnmapbox-maps (10.1.32):
+    - MapboxMaps (~> 10.19.0)
     - React
     - React-Core
-    - rnmapbox-maps/DynamicLibrary (= 10.1.18)
+    - rnmapbox-maps/DynamicLibrary (= 10.1.32)
     - Turf
-  - rnmapbox-maps/DynamicLibrary (10.1.18):
+  - rnmapbox-maps/DynamicLibrary (10.1.32):
     - DoubleConversion
     - hermes-engine
-    - MapboxMaps (~> 10.16.4)
+    - MapboxMaps (~> 10.19.0)
     - RCT-Folly
     - RCTRequired
     - RCTTypeSafety
@@ -1955,7 +1974,7 @@ PODS:
     - Yoga
   - SocketRocket (0.7.1)
   - Toast (4.0.0)
-  - Turf (2.7.0)
+  - Turf (2.8.0)
   - Yoga (0.0.0)
   - ZXingObjC/Core (3.6.9)
   - ZXingObjC/OneD (3.6.9):
@@ -2054,7 +2073,7 @@ DEPENDENCIES:
   - ReactCodegen (from `build/generated/ios`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-community/async-storage`)"
-  - "RNCClipboard (from `../node_modules/@react-native-community/clipboard`)"
+  - "RNCClipboard (from `../node_modules/@react-native-clipboard/clipboard`)"
   - RNDeviceInfo (from `../node_modules/react-native-device-info`)
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNLocalize (from `../node_modules/react-native-localize`)
@@ -2256,7 +2275,7 @@ EXTERNAL SOURCES:
   RNCAsyncStorage:
     :path: "../node_modules/@react-native-community/async-storage"
   RNCClipboard:
-    :path: "../node_modules/@react-native-community/clipboard"
+    :path: "../node_modules/@react-native-clipboard/clipboard"
   RNDeviceInfo:
     :path: "../node_modules/react-native-device-info"
   RNGestureHandler:
@@ -2300,10 +2319,10 @@ SPEC CHECKSUMS:
   glog: 08b301085f15bcbb6ff8632a8ebaf239aae04e6a
   helium-react-native-sdk: 17b612b2dacebc8f10c18ba5611f200a81c940f9
   hermes-engine: 9de51d2f67336348a6cd5b686330e436d1dbd522
-  MapboxCommon: 20466d839cc43381c44df09d19f7f794b55b9a93
-  MapboxCoreMaps: c21f433decbb295874f0c2464e492166db813b56
-  MapboxMaps: c3b36646b9038706bbceb5de203bcdd0f411e9d0
-  MapboxMobileEvents: de50b3a4de180dd129c326e09cd12c8adaaa46d6
+  MapboxCommon: 119f3759f7dc9457f0695848108ab323eb643cb4
+  MapboxCoreMaps: ca17f67baced23f8c952166ac6314c35bad3f66c
+  MapboxMaps: b7f29ec7c33f7dc6d2947c1148edce6db81db9a7
+  MapboxMobileEvents: d044b9edbe0ec7df60f6c2c9634fe9a7f449266b
   MultiplatformBleAdapter: 5a6a897b006764392f9cef785e4360f54fb9477d
   RCT-Folly: bf5c0376ffe4dd2cf438dcf86db385df9fdce648
   RCTDeprecation: 4c2c4a088b6f0ccfcbd53c9d5614b0238ad57909
@@ -2370,18 +2389,18 @@ SPEC CHECKSUMS:
   ReactCodegen: dbfef1fef26f42c900bb1884fa149d49d501d64d
   ReactCommon: 429ca28cd813c31359c73ffac6dc24f93347d522
   RNCAsyncStorage: b03032fdbdb725bea0bd9e5ec5a7272865ae7398
-  RNCClipboard: 41d8d918092ae8e676f18adada19104fa3e68495
+  RNCClipboard: e55ecafbf4e0e42409391a98aceea76278699036
   RNDeviceInfo: aad3c663b25752a52bf8fce93f2354001dd185aa
   RNGestureHandler: fc5ce5bf284640d3af6431c3a5c3bc121e98d045
   RNLocalize: 7c7aeda16c01db7a0918981c14875c0a53be9b79
-  rnmapbox-maps: 925e1a6a2ecf317391b7af03eb746c0b364295cb
+  rnmapbox-maps: 428a6a3c115ed1c5ff887bdbe240536c4b338b55
   RNPermissions: f84a352792c6d017dac6bb96ee190f0c21d7e002
   RNReanimated: 77242c6d67416988a2fd9f5cf574bb3e60016362
   RNScreens: c1e151cab51643c0cf42b88d275592a4aee220f1
   RNSVG: 536cd3c866c878faf72beaba166c8b02fe2b762b
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
-  Turf: 13d1a92d969ca0311bbc26e8356cca178ce95da2
+  Turf: aa2ede4298009639d10db36aba1a7ebaad072a5e
   Yoga: 1d66db49f38fd9e576a1d7c3b081e46ab4c28b9e
   ZXingObjC: 8898711ab495761b2dbbdec76d90164a6d7e14c5
 
