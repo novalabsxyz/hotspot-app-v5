@@ -75,9 +75,9 @@ PODS:
   - glog (0.3.5)
   - helium-react-native-sdk (3.0.0):
     - React-Core
-  - hermes-engine (0.76.0):
-    - hermes-engine/Pre-built (= 0.76.0)
-  - hermes-engine/Pre-built (0.76.0)
+  - hermes-engine (0.76.1):
+    - hermes-engine/Pre-built (= 0.76.1)
+  - hermes-engine/Pre-built (0.76.1)
   - MapboxCommon (23.11.0)
   - MapboxCoreMaps (10.19.1):
     - MapboxCommon (~> 23.11)
@@ -2296,7 +2296,7 @@ SPEC CHECKSUMS:
   fmt: fad7775865bb4340e98e10997c965fd61b3c749e
   glog: 94308668c25e8ccac76f853cda1931c7aa3f5fae
   helium-react-native-sdk: 17b612b2dacebc8f10c18ba5611f200a81c940f9
-  hermes-engine: 72bac9aa09851702d317b774a426375297ca5a69
+  hermes-engine: 46f1ffbf0297f4298862068dd4c274d4ac17a1fd
   MapboxCommon: 119f3759f7dc9457f0695848108ab323eb643cb4
   MapboxCoreMaps: ca17f67baced23f8c952166ac6314c35bad3f66c
   MapboxMaps: b7f29ec7c33f7dc6d2947c1148edce6db81db9a7
