@@ -1,6 +1,7 @@
 {
   "plugins": ["@typescript-eslint", "jest"],
   "extends": [
+    "@react-native",
     "airbnb-typescript",
     "airbnb/hooks",
     "plugin:@typescript-eslint/recommended",

@@ -9,7 +9,7 @@ import React, {
 import MapboxGL from '@rnmapbox/maps'
 import Config from 'react-native-config'
 import LocationIcon from '@assets/images/location-icon.svg'
-import { StyleSheet } from 'react-native'
+import { StyleProp, StyleSheet, ViewStyle } from 'react-native'
 import Box from '../../../components/Box'
 import Text from '../../../components/Text'
 import ActivityIndicator from '../../../components/ActivityIndicator'
@@ -87,11 +87,16 @@ const HotspotLocationPreview = ({
     [geocode, hasLocationName, locationName],
   )
 
+  const mapStyles: StyleProp<ViewStyle> = useMemo(
+    () => ({ height: hasLocationName ? '75%' : '100%' }),
+    [hasLocationName],
+  )
+
   return (
     <Box borderRadius="l" overflow="hidden" height="100%">
       <MapboxGL.MapView
         ref={map}
-        style={{ height: hasLocationName ? '75%' : '100%' }}
+        style={mapStyles}
         styleURL={Config.MAPBOX_STYLE_URL}
         logoEnabled={false}
         rotateEnabled={movable}

@@ -47,7 +47,6 @@ const HotspotSetupBluetoothSuccess = () => {
 
   const handleError = useCallback(
     async (error: unknown) => {
-      // eslint-disable-next-line no-console
       console.error(error)
       let titleKey = 'generic.error'
       let messageKey = 'generic.something_went_wrong'

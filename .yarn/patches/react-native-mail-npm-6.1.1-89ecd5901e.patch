@@ -1,0 +1,48 @@
+diff --git a/android/src/main/java/com/chirag/RNMail/RNMailModule.java b/android/src/main/java/com/chirag/RNMail/RNMailModule.java
+index e93973e510890e9f866187dbc29d82f18d8fcb26..6f8836581fde3cc85010d09e57a9cee6a37347b4 100644
+--- a/android/src/main/java/com/chirag/RNMail/RNMailModule.java
++++ b/android/src/main/java/com/chirag/RNMail/RNMailModule.java
+@@ -127,33 +127,19 @@ public class RNMailModule extends ReactContextBaseJavaModule {
+     PackageManager manager = reactContext.getPackageManager();
+     List<ResolveInfo> list = manager.queryIntentActivities(i, 0);
+
+-    if (list == null || list.size() == 0) {
+-      callback.invoke("not_available");
+-      return;
+-    }
+-
+-    if (list.size() == 1) {
+-      i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+-      try {
+-        reactContext.startActivity(i);
+-      } catch (Exception ex) {
+-        callback.invoke("error");
+-      }
+-    } else {
+-      String chooserTitle = "Send Mail";
++    String chooserTitle = "Send Mail";
+
+-      if (options.hasKey("customChooserTitle") && !options.isNull("customChooserTitle")) {
+-        chooserTitle = options.getString("customChooserTitle");
+-      }
++    if (options.hasKey("customChooserTitle") && !options.isNull("customChooserTitle")) {
++      chooserTitle = options.getString("customChooserTitle");
++    }
+
+-      Intent chooser = Intent.createChooser(i, chooserTitle);
+-      chooser.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
++    Intent chooser = Intent.createChooser(i, chooserTitle);
++    chooser.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+-      try {
+-        reactContext.startActivity(chooser);
+-      } catch (Exception ex) {
+-        callback.invoke("error");
+-      }
++    try {
++      reactContext.startActivity(chooser);
++    } catch (Exception ex) {
++      callback.invoke("error");
+     }
+   }
+ }

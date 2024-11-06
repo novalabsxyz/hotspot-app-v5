@@ -77,7 +77,7 @@ const Button = ({
   }
 
   return (
-    <Box style={{ opacity: disabled ? 0.2 : 1 }} {...rest} height={height}>
+    <Box opacity={disabled ? 0.2 : 1} {...rest} height={height}>
       <TouchableOpacityBox
         height={height}
         backgroundColor={getBackground()}
