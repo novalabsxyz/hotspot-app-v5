@@ -8,7 +8,7 @@ import React, {
 } from 'react'
 import { Linking } from 'react-native'
 import queryString from 'query-string'
-import { BarCodeScannerResult } from 'expo-barcode-scanner'
+import { BarcodeScanningResult } from 'expo-camera'
 import { useSelector } from 'react-redux'
 import {
   parseWalletLinkToken,
@@ -183,7 +183,7 @@ const useAppLink = () => {
 
   const handleBarCode = useCallback(
     (
-      { data }: BarCodeScannerResult,
+      { data }: BarcodeScanningResult,
       scanType: AppLinkCategoryType,
       opts?: Record<string, string>,
     ) => {

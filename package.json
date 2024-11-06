@@ -5,7 +5,7 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx && tsc",
     "prettier": "prettier --write *.ts*",
     "start": "react-native start",
     "test": "jest",
@@ -75,8 +75,7 @@
     "compare-versions": "^3.6.0",
     "date-fns": "^2.16.1",
     "deprecated-react-native-prop-types": "^2.3.0",
-    "expo": "52.0.0-preview.7",
-    "expo-barcode-scanner": "~14.0.1",
+    "expo": "52.0.0-preview.21",
     "expo-camera": "~16.0.3",
     "expo-haptics": "~14.0.0",
     "expo-local-authentication": "~15.0.1",

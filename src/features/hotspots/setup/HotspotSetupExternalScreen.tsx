@@ -2,9 +2,8 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import { RouteProp, useNavigation, useRoute } from '@react-navigation/native'
 import { useTranslation } from 'react-i18next'
 import Icon from '@assets/images/placeholder.svg'
-import { BarCodeScanner, BarCodeScannerResult } from 'expo-barcode-scanner'
-import { Camera } from 'expo-camera'
-import { useDebouncedCallback } from 'use-debounce/lib'
+import { BarcodeScanningResult, Camera, CameraView } from 'expo-camera'
+import { useDebouncedCallback } from 'use-debounce'
 import Toast from 'react-native-simple-toast'
 import { StyleSheet, Linking, ScrollView } from 'react-native'
 import Clipboard from '@react-native-clipboard/clipboard'
@@ -35,7 +34,7 @@ const HotspotSetupExternalScreen = () => {
   const [hasPermission, setHasPermission] = useState<boolean>()
 
   useEffect(() => {
-    BarCodeScanner.requestPermissionsAsync().then(({ status }) =>
+    Camera.requestCameraPermissionsAsync().then(({ status }) =>
       setHasPermission(status === 'granted'),
     )
   }, [])
@@ -55,7 +54,7 @@ const HotspotSetupExternalScreen = () => {
   )
 
   const handleBarCodeScanned = useDebouncedCallback(
-    (result: BarCodeScannerResult) => {
+    (result: BarcodeScanningResult) => {
       try {
         handleBarCode(result, 'add_gateway', {
           hotspotType: params.hotspotType,
@@ -220,11 +219,11 @@ const HotspotSetupExternalScreen = () => {
               aspectRatio={1}
               backgroundColor="primaryText"
             >
-              <Camera
-                barCodeScannerSettings={{
-                  barCodeTypes: [BarCodeScanner.Constants.BarCodeType.qr],
+              <CameraView
+                barcodeScannerSettings={{
+                  barcodeTypes: ['qr'],
                 }}
-                onBarCodeScanned={handleBarCodeScanned.callback}
+                onBarcodeScanned={handleBarCodeScanned.callback}
                 ratio="1:1"
                 style={StyleSheet.absoluteFill}
               />
