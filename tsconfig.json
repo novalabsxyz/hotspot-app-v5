@@ -5,7 +5,7 @@
     "paths": {
       "@assets": ["./src/assets"],
       "@helium/crypto": ["./node_modules/@helium/crypto-react-native"]
-    },
+    }
   },
   "exclude": [
     "node_modules",
