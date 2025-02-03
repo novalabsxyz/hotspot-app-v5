@@ -44,7 +44,12 @@ const initialState: State = {
 const getHotspotAddress = (item: Asset | HeliumHotspot): string => {
   const asset = item as Asset
   if (asset?.content?.json_uri) {
-    return asset.content.json_uri.split('/').slice(-1)[0]
+    const attrs = asset.content.metadata?.attributes
+    // find the attribute with the key of trait_type and value of entity_key_string
+    const entityKey = attrs?.find(
+      (attr) => attr.trait_type === 'ecc_compact',
+    )?.value
+    return entityKey ?? ''
   }
 
   const hotspot = item as HeliumHotspot
