@@ -53,13 +53,6 @@ export const FREEDOM_FI_MAKER_NAME = 'freedomfi'
 export const FREEDOM_FI_MAKER_ADDRESS =
   '13y2EqUUzyQhQGtDSoXktz8m5jHNSiwAKLTYnHNxZq2uH5GGGym'
 
-export const getHotspotTypes = (makerNameOrAddress?: string): HotspotType[] => {
-  if (
-    makerNameOrAddress?.toLowerCase().includes(FREEDOM_FI_MAKER_NAME) ||
-    makerNameOrAddress === FREEDOM_FI_MAKER_ADDRESS
-  ) {
-    return ['IOT', 'MOBILE']
-  }
-
+export const getHotspotTypes = (): HotspotType[] => {
   return ['IOT']
 }

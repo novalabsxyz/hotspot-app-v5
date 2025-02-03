@@ -2,12 +2,7 @@ import React, { useCallback, useMemo, useState } from 'react'
 import { ActivityIndicator, ScrollView } from 'react-native'
 import { useTranslation } from 'react-i18next'
 import { RouteProp, useNavigation, useRoute } from '@react-navigation/native'
-import {
-  useOnboarding,
-  AssertData,
-  useSolana,
-  AddGatewayV1,
-} from '@helium/react-native-sdk'
+import { useOnboarding, AssertData, useSolana } from '@helium/react-native-sdk'
 import { useAsync } from 'react-async-hook'
 import { first, last } from 'lodash'
 import animalName from 'angry-purple-tiger'
@@ -57,16 +52,7 @@ const HotspotSetupConfirmLocationScreen = () => {
     try {
       let networkTypes = params.hotspotNetworkTypes
       if (!networkTypes?.length) {
-        if (params.addGatewayTxn) {
-          const gatewayTxn = AddGatewayV1.fromString(params.addGatewayTxn)
-          networkTypes = getHotspotTypes(gatewayTxn.payer?.b58)
-        } else {
-          // onboarding record lookup agressively rate limits, only lookup if absolutely necessary
-          const onboardingRecord = await getOnboardingRecord(
-            params.hotspotAddress,
-          )
-          networkTypes = getHotspotTypes(onboardingRecord?.maker.name)
-        }
+        networkTypes = getHotspotTypes()
       }
 
       const locationParams = {
