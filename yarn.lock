@@ -11410,6 +11410,7 @@ __metadata:
     h3-js: "npm:^4.1.0"
     husky: "npm:^4.3.0"
     i18next: "npm:^19.8.3"
+    iconv-lite: "npm:^0.6.3"
     jest: "npm:^29.6.3"
     jest-circus: "npm:^27.0.4"
     jest-expo: "npm:52.0.0-preview.1"
@@ -11673,7 +11674,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"iconv-lite@npm:0.6.3, iconv-lite@npm:^0.6.2":
+"iconv-lite@npm:0.6.3, iconv-lite@npm:^0.6.2, iconv-lite@npm:^0.6.3":
   version: 0.6.3
   resolution: "iconv-lite@npm:0.6.3"
   dependencies:

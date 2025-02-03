@@ -1,14 +1,6 @@
 const { getDefaultConfig, mergeConfig } = require('@react-native/metro-config')
-
 const defaultConfig = getDefaultConfig(__dirname)
 const { assetExts, sourceExts } = defaultConfig.resolver
-
-/**
- * Metro configuration
- * * https://reactnative.dev/docs/metro
- *
- * @type {import('metro-config').MetroConfig}
- */
 const config = {
   transformer: {
     babelTransformerPath: require.resolve('react-native-svg-transformer'),
@@ -16,7 +8,15 @@ const config = {
   resolver: {
     assetExts: assetExts.filter((ext) => ext !== 'svg'),
     sourceExts: [...sourceExts, 'svg'],
+    extraNodeModules: {
+      'iconv-lite': require.resolve('iconv-lite'),
+      'iconv-lite/encodings': require.resolve('iconv-lite/encodings'),
+    },
   },
 }
 
-module.exports = mergeConfig(defaultConfig, config)
+// Ensure iconv-lite and its encodings are included in the build
+const mergedConfig = mergeConfig(defaultConfig, config)
+mergedConfig.resolver.assetExts.push('json') // Include JSON files for encodings
+
+module.exports = mergedConfig
