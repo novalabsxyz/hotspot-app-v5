@@ -47,7 +47,7 @@ const getHotspotAddress = (item: Asset | HeliumHotspot): string => {
     const attrs = asset.content.metadata?.attributes
     // find the attribute with the key of trait_type and value of entity_key_string
     const entityKey = attrs?.find(
-      (attr) => attr.trait_type === 'ecc_compact',
+      (attr: { trait_type: string }) => attr.trait_type === 'ecc_compact',
     )?.value
     return entityKey ?? ''
   }
