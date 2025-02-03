@@ -11,21 +11,19 @@ iconv.encodings = encodings
 
 console.log(Object.getOwnPropertyDescriptor(global, 'TextDecoder'))
 
-if (global.TextDecoder) {
-  try {
-    delete global.TextDecoder // Attempt to remove the existing TextDecoder
-  } catch (error) {
-    console.warn('Failed to delete existing TextDecoder:', error)
-  }
+if (typeof global.TextDecoder === 'undefined') {
+  global.TextEncoder = TextEncoder
+  global.TextDecoder = TextDecoder
+
+  // Define global.TextDecoder
+  Object.defineProperty(global, 'TextDecoder', {
+    value: global.TextDecoder,
+    writable: false,
+    configurable: false,
+    enumerable: true,
+  })
+} else {
+  console.warn(
+    'TextDecoder is already defined and not configurable. Skipping override.',
+  )
 }
-
-global.TextEncoder = TextEncoder
-global.TextDecoder = TextDecoder
-
-// Force override global.TextDecoder
-Object.defineProperty(global, 'TextDecoder', {
-  value: global.TextDecoder,
-  writable: false,
-  configurable: false,
-  enumerable: true,
-})
