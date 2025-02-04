@@ -56,7 +56,6 @@ const KABOB_DATA = [
   'assertLocation',
   'transfer',
   'onboardIot',
-  'onboardMobile',
 ] as const
 export type KabobItem = (typeof KABOB_DATA)[number]
 
@@ -184,17 +183,6 @@ const HotspotScreen = () => {
           Toast.show(t('hotspots.copiedToClipboard', { address }))
           break
         }
-        case 'onboardMobile': {
-          nav.navigate('HotspotAssert', {
-            screen: 'HotspotSetupPickLocationScreen',
-            params: {
-              hotspotAddress: address,
-              hotspotType: 'Helium',
-              hotspotNetworkTypes: ['MOBILE'],
-            },
-          })
-          break
-        }
         case 'onboardIot': {
           nav.navigate('HotspotAssert', {
             screen: 'HotspotSetupPickLocationScreen',
@@ -237,12 +225,12 @@ const HotspotScreen = () => {
     const baseItems: KabobItem[] = ['copyAddress', 'assertLocation', 'transfer']
 
     if (isIot) {
-      return [...baseItems, 'onboardMobile']
+      return [...baseItems]
     }
     if (isMobile) {
       return [...baseItems, 'onboardIot']
     }
-    return [...baseItems, 'onboardMobile', 'onboardIot']
+    return [...baseItems, 'onboardIot']
   }, [isIot, isMobile])
 
   const snapPoints = useMemo(() => {
