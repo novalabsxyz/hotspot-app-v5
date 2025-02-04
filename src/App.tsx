@@ -1,3 +1,4 @@
+import './utils/polyfill'
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import React, { useEffect, useMemo } from 'react'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
